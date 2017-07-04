@@ -1,6 +1,12 @@
 # PyCalc
 _Another calculator built using Python_
 
+## Screenshot
+
+**Note**: This was taken on 7th of July, 17.
+
+![Alt text](https://github.com/lollichop/PyCalc/blob/master/screenshots/7-4-17-1.PNG)
+
 ## Todo
 
 * Mode 0: Basic
