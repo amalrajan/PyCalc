@@ -13,6 +13,8 @@ _Another calculator built using Python_
 * Mode 1: Scientific
 * Mode 2: Programmer
 * Mode 3: Unit converter
+* Save usage logs
+* Use `/cmd` for command
 
 
 ## License
