@@ -9,6 +9,7 @@ _Another calculator built using Python_
 
 
 **UI prototype**, 5th of July(01).
+
 ![Alt-text](https://github.com/lollichop/PyCalc/blob/master/screenshots/7-5-17-1.PNG)
 
 ## Todo
