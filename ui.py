@@ -6,7 +6,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class UserInterface(object):
     def __init__(self):
         # Initializing the instance attributes.
-
         self.gridLayout = None
         self.gridLayout_2 = None
 
