@@ -4,6 +4,48 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class UserInterface(object):
+    def __init__(self):
+        # Initializing the instance attributes.
+
+        self.gridLayout = None
+        self.gridLayout_2 = None
+
+        self.button_c = None
+        self.button_squareroot = None
+        self.button_minus = None
+        self.button_one = None
+        self.button_two = None
+        self.button_three = None
+        self.button_four = None
+        self.button_five = None
+        self.button_six = None
+        self.button_seven = None
+        self.button_eight = None
+        self.button_nine = None
+        self.button_plus = None
+        self.button_reciprocal = None
+        self.button_square = None
+        self.button_ce = None
+        self.button_divide = None
+        self.button_multiply = None
+        self.button_backspace = None
+        self.button_plusminus = None
+        self.button_zero = None
+        self.button_decimal = None
+        self.button_equals = None
+
+        self.label = None
+        self.horizontalLayout = None
+        self.pushButton_26 = None
+        self.pushButton_25 = None
+        self.pushButton_27 = None
+        self.pushButton_28 = None
+        self.pushButton_29 = None
+
+        self.line_result = None
+
+
+
 
     def initialize_ui(self, Form):
         Form.setObjectName("Form")
@@ -233,22 +275,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_reciprocal.setFont(font)
-        self.button_reciprocal.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_reciprocal.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_reciprocal.setIconSize(QtCore.QSize(16, 16))
         self.button_reciprocal.setFlat(False)
         self.button_reciprocal.setObjectName("button_reciprocal")
@@ -263,22 +306,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_square.setFont(font)
-        self.button_square.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_square.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_square.setIconSize(QtCore.QSize(16, 16))
         self.button_square.setFlat(False)
         self.button_square.setObjectName("button_square")
@@ -293,22 +337,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_ce.setFont(font)
-        self.button_ce.setStyleSheet("QPushButton {\n"
-"    background-color:rgb(255, 98, 87);\n"
-"    border: 0;\n"
-"    border-radius: 6px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_ce.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color:rgb(255, 98, 87);\n"
+            "    border: 0;\n"
+            "    border-radius: 6px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_ce.setObjectName("button_ce")
         self.gridLayout.addWidget(self.button_ce, 1, 0, 1, 1)
         self.button_seven = QtWidgets.QPushButton(Form)
@@ -321,22 +366,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_seven.setFont(font)
-        self.button_seven.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_seven.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_seven.setObjectName("button_seven")
         self.gridLayout.addWidget(self.button_seven, 2, 0, 1, 1)
         self.button_divide = QtWidgets.QPushButton(Form)
@@ -349,22 +395,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_divide.setFont(font)
-        self.button_divide.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(209, 209, 209);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_divide.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(209, 209, 209);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_divide.setObjectName("button_divide")
         self.gridLayout.addWidget(self.button_divide, 1, 3, 1, 1)
         self.button_eight = QtWidgets.QPushButton(Form)
@@ -377,22 +424,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_eight.setFont(font)
-        self.button_eight.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_eight.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_eight.setObjectName("button_eight")
         self.gridLayout.addWidget(self.button_eight, 2, 1, 1, 1)
         self.button_nine = QtWidgets.QPushButton(Form)
@@ -405,22 +453,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_nine.setFont(font)
-        self.button_nine.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_nine.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_nine.setObjectName("button_nine")
         self.gridLayout.addWidget(self.button_nine, 2, 2, 1, 1)
         self.button_multiply = QtWidgets.QPushButton(Form)
@@ -433,22 +482,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_multiply.setFont(font)
-        self.button_multiply.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(209, 209, 209);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_multiply.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(209, 209, 209);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_multiply.setObjectName("button_multiply")
         self.gridLayout.addWidget(self.button_multiply, 2, 3, 1, 1)
         self.button_five = QtWidgets.QPushButton(Form)
@@ -461,22 +511,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_five.setFont(font)
-        self.button_five.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_five.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_five.setObjectName("button_five")
         self.gridLayout.addWidget(self.button_five, 3, 1, 1, 1)
         self.button_modulus = QtWidgets.QPushButton(Form)
@@ -490,22 +541,23 @@ class UserInterface(object):
         font.setPointSize(11)
         self.button_modulus.setFont(font)
         self.button_modulus.setMouseTracking(False)
-        self.button_modulus.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_modulus.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_modulus.setIconSize(QtCore.QSize(16, 16))
         self.button_modulus.setFlat(False)
         self.button_modulus.setObjectName("button_modulus")
@@ -520,22 +572,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_backspace.setFont(font)
-        self.button_backspace.setStyleSheet("QPushButton {\n"
-"    background-color:rgb(255, 98, 87);\n"
-"    border: 0;\n"
-"    border-radius: 6px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_backspace.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color:rgb(255, 98, 87);\n"
+            "    border: 0;\n"
+            "    border-radius: 6px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_backspace.setObjectName("button_backspace")
         self.gridLayout.addWidget(self.button_backspace, 1, 2, 1, 1)
         self.button_four = QtWidgets.QPushButton(Form)
@@ -548,22 +601,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_four.setFont(font)
-        self.button_four.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_four.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_four.setObjectName("button_four")
         self.gridLayout.addWidget(self.button_four, 3, 0, 1, 1)
         self.button_six = QtWidgets.QPushButton(Form)
@@ -576,22 +630,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_six.setFont(font)
-        self.button_six.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_six.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_six.setObjectName("button_six")
         self.gridLayout.addWidget(self.button_six, 3, 2, 1, 1)
         self.button_plusminus = QtWidgets.QPushButton(Form)
@@ -604,22 +659,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_plusminus.setFont(font)
-        self.button_plusminus.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_plusminus.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_plusminus.setObjectName("button_plusminus")
         self.gridLayout.addWidget(self.button_plusminus, 5, 0, 1, 1)
         self.button_zero = QtWidgets.QPushButton(Form)
@@ -632,22 +688,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_zero.setFont(font)
-        self.button_zero.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_zero.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_zero.setObjectName("button_zero")
         self.gridLayout.addWidget(self.button_zero, 5, 1, 1, 1)
         self.button_decimal = QtWidgets.QPushButton(Form)
@@ -660,22 +717,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_decimal.setFont(font)
-        self.button_decimal.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"    border-radius: 3px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_decimal.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "    border-radius: 3px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_decimal.setObjectName("button_decimal")
         self.gridLayout.addWidget(self.button_decimal, 5, 2, 1, 1)
         self.button_equals = QtWidgets.QPushButton(Form)
@@ -688,22 +746,23 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(11)
         self.button_equals.setFont(font)
-        self.button_equals.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(28, 213, 0) ;\n"
-"    border: 0;\n"
-"    border-radius: 6px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(0, 191, 0) ;\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    border: 0;\n"
-"    color: white;\n"
-" }")
+        self.button_equals.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(28, 213, 0) ;\n"
+            "    border: 0;\n"
+            "    border-radius: 6px;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(0, 191, 0) ;\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    border: 0;\n"
+            "    color: white;\n"
+            " }")
         self.button_equals.setObjectName("button_equals")
         self.gridLayout.addWidget(self.button_equals, 5, 3, 1, 1)
         self.gridLayout_2.addLayout(self.gridLayout, 4, 0, 1, 1)
@@ -729,21 +788,22 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(10)
         self.pushButton_26.setFont(font)
-        self.pushButton_26.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    color: white;\n"
-"    border: 0;\n"
-" }")
+        self.pushButton_26.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    color: white;\n"
+            "    border: 0;\n"
+            " }")
         self.pushButton_26.setObjectName("pushButton_26")
         self.horizontalLayout.addWidget(self.pushButton_26)
         self.pushButton_25 = QtWidgets.QPushButton(Form)
@@ -756,21 +816,22 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(10)
         self.pushButton_25.setFont(font)
-        self.pushButton_25.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    color: white;\n"
-"    border: 0;\n"
-" }")
+        self.pushButton_25.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    color: white;\n"
+            "    border: 0;\n"
+            " }")
         self.pushButton_25.setObjectName("pushButton_25")
         self.horizontalLayout.addWidget(self.pushButton_25)
         self.pushButton_27 = QtWidgets.QPushButton(Form)
@@ -783,21 +844,22 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(10)
         self.pushButton_27.setFont(font)
-        self.pushButton_27.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    color: white;\n"
-"    border: 0;\n"
-" }")
+        self.pushButton_27.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    color: white;\n"
+            "    border: 0;\n"
+            " }")
         self.pushButton_27.setObjectName("pushButton_27")
         self.horizontalLayout.addWidget(self.pushButton_27)
         self.pushButton_28 = QtWidgets.QPushButton(Form)
@@ -810,21 +872,22 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(10)
         self.pushButton_28.setFont(font)
-        self.pushButton_28.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    color: white;\n"
-"    border: 0;\n"
-" }")
+        self.pushButton_28.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    color: white;\n"
+            "    border: 0;\n"
+            " }")
         self.pushButton_28.setObjectName("pushButton_28")
         self.horizontalLayout.addWidget(self.pushButton_28)
         self.pushButton_29 = QtWidgets.QPushButton(Form)
@@ -837,21 +900,22 @@ class UserInterface(object):
         font.setFamily("Segoe UI")
         font.setPointSize(10)
         self.pushButton_29.setFont(font)
-        self.pushButton_29.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(227, 227, 227);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: rgb(182, 182, 182);\n"
-"    border: 0;\n"
-"}\n"
-"\n"
-"QPushButton:pressed { \n"
-"    background-color: rgb(0, 0, 0);\n"
-"    color: white;\n"
-"    border: 0;\n"
-" }")
+        self.pushButton_29.setStyleSheet(
+            "QPushButton {\n"
+            "    background-color: rgb(227, 227, 227);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background: rgb(182, 182, 182);\n"
+            "    border: 0;\n"
+            "}\n"
+            "\n"
+            "QPushButton:pressed { \n"
+            "    background-color: rgb(0, 0, 0);\n"
+            "    color: white;\n"
+            "    border: 0;\n"
+            " }")
         self.pushButton_29.setObjectName("pushButton_29")
         self.horizontalLayout.addWidget(self.pushButton_29)
         self.gridLayout_2.addLayout(self.horizontalLayout, 3, 0, 1, 1)
@@ -870,9 +934,10 @@ class UserInterface(object):
         self.text_expression.setToolTip("")
         self.text_expression.setToolTipDuration(3)
         self.text_expression.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.text_expression.setStyleSheet("QTextEdit{\n"
-"    border: 0;\n"
-"}")
+        self.text_expression.setStyleSheet(
+            "QTextEdit{\n"
+            "    border: 0;\n"
+            "}")
         self.text_expression.setUndoRedoEnabled(False)
         self.text_expression.setAcceptRichText(False)
         self.text_expression.setCursorWidth(10)
