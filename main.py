@@ -15,7 +15,7 @@ class Main(QDialog):
 
         self.result = None
 
-        self.text_expression_data = ''
+        self.line_expression_data = ''
 
         self.ui.button_one.clicked.connect(lambda: self.button_clicked('1'))
         self.ui.button_two.clicked.connect(lambda: self.button_clicked('2'))
@@ -32,7 +32,7 @@ class Main(QDialog):
         self.ui.button_divide.clicked.connect(lambda: self.button_clicked('/'))
         self.ui.button_multiply.clicked.connect(lambda: self.button_clicked('*'))
 
-        self.ui.text_expression.returnPressed.connect(self.evaluate_expression)
+        self.ui.line_expression.returnPressed.connect(self.evaluate_expression)
 
         self.ui.button_c.clicked.connect(self.button_clicked_clear)
         self.ui.button_backspace.clicked.connect(self.button_clicked_backspace)
@@ -42,25 +42,26 @@ class Main(QDialog):
         self.show()
 
     def button_clicked(self, text):
-        self.text_expression_data += text
-        self.ui.text_expression.setText(self.text_expression_data)
+        self.line_expression_data += text
+        self.ui.line_expression.setText(self.line_expression_data)
 
     def button_clicked_backspace(self):
-        self.text_expression_data = self.text_expression_data[:-1]
-        self.ui.text_expression.setText(self.text_expression_data)
+        self.line_expression_data = self.line_expression_data[:-1]
+        self.ui.line_expression.setText(self.line_expression_data)
 
     def button_clicked_clear(self):
-        self.text_expression_data = ''
-        self.ui.text_expression.setText(self.text_expression_data)
+        self.line_expression_data = ''
+        self.ui.line_expression.setText(self.line_expression_data)
+        self.ui.line_result.setText('')
 
     def evaluate_expression(self):
-        if '/cmd' in self.text_expression_data:
+        if '/cmd' in self.line_expression_data:
             self.evaluate_command()
 
         # Get text from the text field.
-        self.text_expression_data = self.ui.text_expression.text()
+        self.line_expression_data = self.ui.line_expression.text()
 
-        self.result = eval(self.text_expression_data)
+        self.result = eval(self.line_expression_data)
         self.display_result(self.result)
 
     def evaluate_command(self):
@@ -71,9 +72,9 @@ class Main(QDialog):
             print("PRESSED")
 
     def display_result(self, result):
-        # self.ui.text_expression.setFontPointSize(20)
-        self.ui.text_expression.setText(str(result))
-        self.text_expression_data = str(result)
+        # self.ui.line_expression.setFontPointSize(20)
+        self.ui.line_result.setText(str(result))
+        self.line_expression_data = str(result)
     
 app = QApplication(sys.argv)
 w = Main()
