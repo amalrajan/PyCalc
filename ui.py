@@ -920,7 +920,7 @@ class UserInterface(object):
         self.gridLayout_2.addLayout(self.horizontalLayout, 3, 0, 1, 1)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.text_expression = QtWidgets.QTextEdit(Form)
+        self.text_expression = QtWidgets.QLineEdit(Form)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(1)
         sizePolicy.setVerticalStretch(1)
@@ -934,12 +934,12 @@ class UserInterface(object):
         self.text_expression.setToolTipDuration(3)
         self.text_expression.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.text_expression.setStyleSheet(
-            "QTextEdit{\n"
+            "QLineEdit{\n"
             "    border: 0;\n"
             "}")
-        self.text_expression.setUndoRedoEnabled(False)
-        self.text_expression.setAcceptRichText(False)
-        self.text_expression.setCursorWidth(10)
+        # self.text_expression.setUndoRedoEnabled(False)
+        # self.text_expression.setAcceptRichText(False)
+        # self.text_expression.setCursorWidth(10)
         self.text_expression.setObjectName("text_expression")
         self.verticalLayout_2.addWidget(self.text_expression)
         self.gridLayout_2.addLayout(self.verticalLayout_2, 1, 0, 1, 1)

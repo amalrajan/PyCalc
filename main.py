@@ -2,6 +2,7 @@
 
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QDialog
+from PyQt5 import QtCore
 from ui import UserInterface
 
 
@@ -31,6 +32,8 @@ class Main(QDialog):
         self.ui.button_divide.clicked.connect(lambda: self.button_clicked('/'))
         self.ui.button_multiply.clicked.connect(lambda: self.button_clicked('*'))
 
+        self.ui.text_expression.returnPressed.connect(self.evaluate_expression)
+
         self.ui.button_c.clicked.connect(self.button_clicked_clear)
         self.ui.button_backspace.clicked.connect(self.button_clicked_backspace)
 
@@ -55,7 +58,7 @@ class Main(QDialog):
             self.evaluate_command()
 
         # Get text from the text field.
-        self.text_expression_data = self.ui.text_expression.toPlainText()
+        self.text_expression_data = self.ui.text_expression.text()
 
         self.result = eval(self.text_expression_data)
         self.display_result(self.result)
@@ -63,8 +66,12 @@ class Main(QDialog):
     def evaluate_command(self):
         pass
 
+    def keyPressEvent(self, QKeyEvent):
+        if QKeyEvent.key == QtCore.Qt.Key_Return:
+            print("PRESSED")
+
     def display_result(self, result):
-        #self.ui.text_expression.setFontPointSize(20)
+        # self.ui.text_expression.setFontPointSize(20)
         self.ui.text_expression.setText(str(result))
         self.text_expression_data = str(result)
     
