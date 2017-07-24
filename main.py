@@ -54,6 +54,9 @@ class Main(QDialog):
         if '/cmd' in self.text_expression_data:
             self.evaluate_command()
 
+        # Get text from the text field.
+        self.text_expression_data = self.ui.text_expression.toPlainText()
+
         self.result = eval(self.text_expression_data)
         self.display_result(self.result)
 
