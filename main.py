@@ -2,11 +2,11 @@
 
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QDialog
-from PyQt5 import QtCore
+from PyQt5.QtCore import Qt
 from ui import UserInterface
 
 
-class Main(QDialog):
+class Main(QWidget):
     def __init__(self):
         super().__init__()
 
@@ -34,7 +34,8 @@ class Main(QDialog):
 
         self.ui.line_expression.returnPressed.connect(self.evaluate_expression)
 
-        self.ui.button_c.clicked.connect(self.button_clicked_clear)
+        self.ui.button_c.clicked.connect(self.button_clicked_c)
+        self.ui.button_ce.clicked.connect(self.button_clicked_ce)
         self.ui.button_backspace.clicked.connect(self.button_clicked_backspace)
 
         self.ui.button_equals.clicked.connect(self.evaluate_expression)
@@ -49,7 +50,11 @@ class Main(QDialog):
         self.line_expression_data = self.line_expression_data[:-1]
         self.ui.line_expression.setText(self.line_expression_data)
 
-    def button_clicked_clear(self):
+    def button_clicked_ce(self):
+        self.line_expression_data = ''
+        self.ui.line_expression.setText(self.line_expression_data)
+
+    def button_clicked_c(self):
         self.line_expression_data = ''
         self.ui.line_expression.setText(self.line_expression_data)
         self.ui.line_result.setText('')
@@ -66,10 +71,6 @@ class Main(QDialog):
 
     def evaluate_command(self):
         pass
-
-    def keyPressEvent(self, QKeyEvent):
-        if QKeyEvent.key == QtCore.Qt.Key_Return:
-            print("PRESSED")
 
     def display_result(self, result):
         # self.ui.line_expression.setFontPointSize(20)
