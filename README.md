@@ -1,5 +1,5 @@
 # PyCalc
-_Another calculator built using Python_
+_A hackable calculator for the 21st century_
 
 ## Screenshot
 
